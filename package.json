@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-delay-app-boot",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "The default blueprint for ember-cli addons.",
   "directories": {
     "test": "tests"
