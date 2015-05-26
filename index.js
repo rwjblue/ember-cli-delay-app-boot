@@ -33,7 +33,10 @@ module.exports = {
   },
 
   included: function() {
-    this.app.options.autoRun = false;
+    if (this.options.environments.indexOf(this.app.env) !== -1) {
+      this.app.options.autoRun = false;
+    }
+    
     this.initializeOptions();
   }
 };
