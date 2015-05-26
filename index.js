@@ -21,6 +21,10 @@ module.exports = {
         this.options[option] = defaultOptions[option];
       }
     }
+    
+    if (this.options.environments.indexOf(this.app.env) !== -1) {
+      this.app.options.autoRun = false;
+    }
   },
   
   contentFor: function(type, config) {
@@ -33,10 +37,6 @@ module.exports = {
   },
 
   included: function() {
-    if (this.options.environments.indexOf(this.app.env) !== -1) {
-      this.app.options.autoRun = false;
-    }
-    
     this.initializeOptions();
   }
 };
